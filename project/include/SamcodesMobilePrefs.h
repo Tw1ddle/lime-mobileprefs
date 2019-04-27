@@ -3,9 +3,9 @@
 
 namespace samcodesmobileprefs
 {
-	void setUserPreference(const char* inId, const char* inPreference);
-	const char* getUserPreference(const char* inId);
-	void clearUserPreference(const char* inId);
+	void setUserPreference(const char* key, const char* val);
+	const char* getUserPreference(const char* key);
+	void clearUserPreference(const char* key);
 }
 
 #endif

@@ -12,19 +12,19 @@ import lime.system.CFFI;
 
 class MobilePrefs
 {
-	public static function getUserPreference(name:String):String
+	public static function getUserPreference(key:String):String
 	{
-		return get_user_preference(name);
+		return get_user_preference(key);
 	}
 
-	public static function setUserPreference(name:String, value:String):Void
+	public static function setUserPreference(key:String, value:String):Void
 	{
-		set_user_preference(name, value);
+		set_user_preference(key, value);
 	}
 
-	public static function clearUserPreference(name:String):Void
+	public static function clearUserPreference(key:String):Void
 	{
-		clear_user_preference(name);
+		clear_user_preference(key);
 	}
 
 	#if android
