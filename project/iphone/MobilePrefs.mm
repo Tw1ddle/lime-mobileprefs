@@ -10,7 +10,7 @@ namespace mobileprefs
 
 const char* getUserPreference(const char* inId)
 {
-	static char* currentPref = ""; // Note this makes the function non-reentrant
+	static std::string currentPref = ""; // Note this makes the function non-reentrant
 	
 	NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
 	#ifndef OBJC_ARC
@@ -18,16 +18,14 @@ const char* getUserPreference(const char* inId)
 	#endif
 	NSString* strId = [[NSString alloc] initWithUTF8String:inId];
 	NSString* pref = [userDefaults stringForKey:strId];
-	std::string result(pref ? [pref UTF8String] : "");
-
-	currentPref = result.c_str();
+	currentPref = (pref ? [pref UTF8String] : "");
 
 	#ifndef OBJC_ARC
 	[strId release];
 	[pool drain];
 	#endif
 
-	return currentPref;
+	return currentPref.c_str();
 }
 
 void setUserPreference(const char* inId, const char* inPreference)
