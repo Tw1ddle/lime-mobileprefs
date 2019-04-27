@@ -1,7 +1,7 @@
-#ifndef MOBILEPREFSEXT_H
-#define MOBILEPREFSEXT_H
+#ifndef SAMCODESMOBILEPREFSEXT_H
+#define SAMCODESMOBILEPREFSEXT_H
 
-namespace mobileprefs
+namespace samcodesmobileprefs
 {
 	void setUserPreference(const char* inId, const char* inPreference);
 	const char* getUserPreference(const char* inId);
