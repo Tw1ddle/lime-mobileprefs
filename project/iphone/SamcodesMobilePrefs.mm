@@ -8,7 +8,8 @@ namespace samcodesmobileprefs
 
 const char* getUserPreference(const char* key)
 {
-	static NSString* currentPref = ""; // Note this makes the function non-reentrant
+	static const char* empty = "";
+	static NSString* currentPref = @""; // Note this makes the function non-reentrant
 	
 	NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
 	
@@ -27,7 +28,8 @@ const char* getUserPreference(const char* key)
 	[pool drain];
 	#endif
 
-	return currentPref;
+	const char* s = [currentPref UTF8String];
+	return s ? s : empty;
 }
 
 void setUserPreference(const char* key, const char* val)
@@ -40,7 +42,7 @@ void setUserPreference(const char* key, const char* val)
 
 	NSString* strKey = [[NSString alloc] initWithUTF8String:key];
 	NSString* strVal = [[NSString alloc] initWithUTF8String:val];
-	[userDefaults setObject:strPref forKey:key];
+	[userDefaults setObject:strVal forKey:strKey];
 
 	#ifndef OBJC_ARC
 	[strKey release];
