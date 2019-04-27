@@ -1,28 +1,28 @@
 <xml>
-    <include name="${HXCPP}/build-tool/BuildCommon.xml"/>
-	    
-    <files id="common">
-	<compilerflag value="-Iinclude"/>
-	<file name="common/ExternalInterface.cpp"/>
-    </files>
+	<include name="${HXCPP}/build-tool/BuildCommon.xml"/>
 
-    <files id="iphone">
-        <depend name="${HXCPP}/include/hx/Macros.h"/>
-        <depend name="${HXCPP}/include/hx/CFFI.h"/>
-        <compilerflag value="-IiPhone/include"/>
-        <compilerflag value="-Iinclude"/>
+	<files id="common">
+		<compilerflag value="-Iinclude"/>
+		<file name="common/ExternalInterface.cpp"/>
+	</files>
 
-        <file name="iphone/MobilePrefs.mm"/>
-    </files>
-	
+	<files id="iphone">
+		<depend name="${HXCPP}/include/hx/Macros.h"/>
+		<depend name="${HXCPP}/include/hx/CFFI.h"/>
+		<compilerflag value="-IiPhone/include"/>
+		<compilerflag value="-Iinclude"/>
+
+		<file name="iphone/MobilePrefs.mm"/>
+	</files>
+
 	<target id="NDLL" output="${LIBPREFIX}mobileprefs${debug_extra}${LIBEXTRA}" tool="linker" toolid="${STD_MODULE_LINK}">
 		<outdir name="../ndll/${BINDIR}" />
 		<ext value=".ndll" if="windows || mac || linux"/>
 		<files id="common"/>
-                <files id="iphone" if="iphone"/>
+		<files id="iphone" if="iphone"/>
 	</target>
 
 	<target id="default">
-        	<target id="NDLL"/>
+		<target id="NDLL"/>
 	</target>
 </xml>

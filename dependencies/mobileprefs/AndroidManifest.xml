@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.mobileprefs" android:versionCode="::APP_BUILD_NUMBER::" android:versionName="::APP_VERSION::" android:installLocation="::ANDROID_INSTALL_LOCATION::">
-    
-    <uses-sdk
-        android:minSdkVersion="::ANDROID_MINIMUM_SDK_VERSION::"
-        android:targetSdkVersion="::ANDROID_TARGET_SDK_VERSION::" />
-	
-    <application android:debuggable="::DEBUG::">
-        
-    </application>
-    
-</manifest>
+	<uses-sdk android:minSdkVersion="::ANDROID_MINIMUM_SDK_VERSION::" android:targetSdkVersion="::ANDROID_TARGET_SDK_VERSION::" />
 
+	<application android:debuggable="::DEBUG::"></application>
+</manifest>

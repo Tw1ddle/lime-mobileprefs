@@ -1,11 +1,11 @@
-#ifndef MobilePrefs_H
-#define MobilePrefs_H
+#ifndef MOBILEPREFSEXT_H
+#define MOBILEPREFSEXT_H
 
-namespace mobileprefs 
-{	
-    bool SetUserPreference(const char* inId, const char* inPreference);
-    const char* GetUserPreference(const char* inId);
-    bool ClearUserPreference(const char* inId);
+namespace mobileprefs
+{
+	bool setUserPreference(const char* inId, const char* inPreference);
+	const char* getUserPreference(const char* inId);
+	bool clearUserPreference(const char* inId);
 }
 
 #endif
