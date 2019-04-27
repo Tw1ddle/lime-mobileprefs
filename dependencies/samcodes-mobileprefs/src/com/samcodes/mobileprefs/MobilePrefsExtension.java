@@ -1,5 +1,6 @@
 package com.samcodes.mobileprefs;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import org.haxe.extension.Extension;
 

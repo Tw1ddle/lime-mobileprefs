@@ -22,7 +22,7 @@ const char* getUserPreference(const char* key)
 	NSString* strKey = [[NSString alloc] initWithUTF8String:key];
 	currentPref = [userDefaults stringForKey:strKey];
 	if(!currentPref) {
-		currentPref = "";
+		currentPref = @"";
 	}
 
 	#ifndef OBJC_ARC
