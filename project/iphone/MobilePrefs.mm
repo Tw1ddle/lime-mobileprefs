@@ -30,7 +30,7 @@ const char* getUserPreference(const char* inId)
 	return currentPref;
 }
 
-bool setUserPreference(const char* inId, const char* inPreference)
+void setUserPreference(const char* inId, const char* inPreference)
 {
 	NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
 	
@@ -47,11 +47,9 @@ bool setUserPreference(const char* inId, const char* inPreference)
 	[strPref release];
 	[pool drain];
 	#endif
-
-	return true;
 }
 
-bool clearUserPreference(const char* inId)
+void clearUserPreference(const char* inId)
 {
 	NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
 
@@ -66,8 +64,6 @@ bool clearUserPreference(const char* inId)
 	[strId release];
 	[pool drain];
 	#endif
-
-	return true;
 }
 
 }

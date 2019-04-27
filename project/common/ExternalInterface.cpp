@@ -11,25 +11,23 @@ using namespace mobileprefs;
 
 #ifdef IPHONE
 
-value mobileprefs_set_user_preference(value inId, value inValue)
+void mobileprefs_set_user_preference(value inId, value inValue)
 {
-	bool result = SetUserPreference(val_string(inId), val_string(inValue));
-	return alloc_bool(result);
+	setUserPreference(val_string(inId), val_string(inValue));
 }
-DEFINE_PRIM(mobileprefs_set_user_preference, 2);
+DEFINE_PRIME2v(mobileprefs_set_user_preference);
 
 value mobileprefs_get_user_preference(value inId)
 {
-	return alloc_string(GetUserPreference(val_string(inId)));
+	return alloc_string(getUserPreference(val_string(inId)));
 }
-DEFINE_PRIM(mobileprefs_get_user_preference, 1);
+DEFINE_PRIME1(mobileprefs_get_user_preference);
 
-value mobileprefs_clear_user_preference(value inId)
+void mobileprefs_clear_user_preference(value inId)
 {
-	bool result = ClearUserPreference(val_string(inId));
-	return alloc_bool(result);
+	clearUserPreference(val_string(inId));
 }
-DEFINE_PRIM(mobileprefs_clear_user_preference, 1);
+DEFINE_PRIME1v(mobileprefs_clear_user_preference);
 
 #endif
 
