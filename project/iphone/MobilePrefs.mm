@@ -1,12 +1,13 @@
 #include <MobilePrefs.h>
-#import <UIKit/UIKit.h>
-#import <CoreFoundation/CoreFoundation.h>
 
-using namespace mobileprefs;
+#include <string>
+
+#import <CoreFoundation/CoreFoundation.h>
+#import <UIKit/UIKit.h>
 
 namespace mobileprefs 
 {
-    std::string GetUserPreference(const char *inId)
+    const char* GetUserPreference(const char *inId)
 	{
 		NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
 		#ifndef OBJC_ARC
