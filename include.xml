@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
-	<ndll name="mobileprefs" if="ios" />
+	<ndll name="samcodesmobileprefs" if="ios" />
 	
 	<section if="android">
-		<dependency name="mobileprefs" path="dependencies/mobileprefs" />
+		<dependency name="samcodes-mobileprefs" path="dependencies/samcodes-mobileprefs" />
 	</section>
 </project>

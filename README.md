@@ -1,21 +1,21 @@
 # MobilePrefs
 
-[![Travis Build Status](https://img.shields.io/travis/Tw1ddle/lime-mobileprefs.svg?style=flat-square)](https://travis-ci.org/Tw1ddle/lime-mobileprefs)
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](https://github.com/Tw1ddle/lime-mobileprefs/blob/master/LICENSE)
+[![Travis Build Status](https://img.shields.io/travis/Tw1ddle/samcodes-mobileprefs.svg?style=flat-square)](https://travis-ci.org/Tw1ddle/samcodes-mobileprefs)
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](https://github.com/Tw1ddle/samcodes-mobileprefs/blob/master/LICENSE)
 
 Support for upgrading from a legacy OpenFL SharedObject implementation to a newer one for Haxe Android and iOS targets. Useful for salvaging old savedata when updating from very old to new OpenFL versions. See [this forum thread](https://community.openfl.org/t/need-help-loading-old-android-and-ios-saves/10400) for details.
 
 ### Install
 
 ```bash
-haxelib install lime-mobileprefs
+haxelib install samcodes-mobileprefs
 ```
 
 ### Usage
 
 Include the haxelib through Project.xml:
 ```xml
-<haxelib name="lime-mobileprefs" />
+<haxelib name="samcodes-mobileprefs" />
 ```
 
 ### Notes

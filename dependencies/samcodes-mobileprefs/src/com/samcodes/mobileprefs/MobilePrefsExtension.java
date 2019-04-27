@@ -1,11 +1,11 @@
-package com.mobileprefs;
+package com.samcodes.mobileprefs;
 
 import android.app.*;
 import android.content.*;
 import org.haxe.extension.Extension;
 import org.haxe.lime.*;
 
-public class MobilePrefs extends Extension
+public class MobilePrefsExtension extends Extension
 {
 	private static final String LEGACY_GLOBAL_PREF_FILE = "nmeAppPrefs";
 

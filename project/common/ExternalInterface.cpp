@@ -5,39 +5,39 @@
 #include <hx/CFFI.h>
 #include <hx/CFFIPrime.h>
 
-#include "MobilePrefs.h"
+#include "SamcodesMobilePrefs.h"
 
-using namespace mobileprefs;
+using namespace samcodesmobileprefs;
 
 #ifdef IPHONE
 
-void mobileprefs_set_user_preference(value inId, value inValue)
+void samcodesmobileprefs_set_user_preference(value inId, value inValue)
 {
 	setUserPreference(val_string(inId), val_string(inValue));
 }
-DEFINE_PRIME2v(mobileprefs_set_user_preference);
+DEFINE_PRIME2v(samcodesmobileprefs_set_user_preference);
 
-value mobileprefs_get_user_preference(value inId)
+value samcodesmobileprefs_get_user_preference(value inId)
 {
 	return alloc_string(getUserPreference(val_string(inId)));
 }
-DEFINE_PRIME1(mobileprefs_get_user_preference);
+DEFINE_PRIME1(samcodesmobileprefs_get_user_preference);
 
-void mobileprefs_clear_user_preference(value inId)
+void samcodesmobileprefs_clear_user_preference(value inId)
 {
 	clearUserPreference(val_string(inId));
 }
-DEFINE_PRIME1v(mobileprefs_clear_user_preference);
+DEFINE_PRIME1v(samcodesmobileprefs_clear_user_preference);
 
 #endif
 
-extern "C" void mobileprefs_main()
+extern "C" void samcodesmobileprefs_main()
 {
 	val_int(0);
 }
-DEFINE_ENTRY_POINT(mobileprefs_main);
+DEFINE_ENTRY_POINT(samcodesmobileprefs_main);
 
-extern "C" int mobileprefs_register_prims()
+extern "C" int samcodesmobileprefs_register_prims()
 {
 	return 0;
 }

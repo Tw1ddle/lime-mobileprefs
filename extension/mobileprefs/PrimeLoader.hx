@@ -19,7 +19,7 @@ class PrimeLoader {
 	#end
 	
 	public static inline macro function load(inName2:Expr, inSig:Expr) {
-		return macro cpp.Prime.load("mobileprefs", $inName2, $inSig, false);
+		return macro cpp.Prime.load("samcodesmobileprefs", $inName2, $inSig, false);
 	}
 }
 

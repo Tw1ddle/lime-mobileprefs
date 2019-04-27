@@ -28,7 +28,7 @@ class MobilePrefs
 	}
 
 	#if android
-	private static inline var packageName:String = "com/mobileprefs/MobilePrefs";
+	private static inline var packageName:String = "com/samcodes/mobileprefs/MobilePrefsExtension";
 	private static inline function bindJNI(jniMethod:String, jniSignature:String) {
 		return JNI.createStaticMethod(packageName, jniMethod, jniSignature);
 	}
@@ -38,9 +38,9 @@ class MobilePrefs
 	#end
 
 	#if ios
-	private static var get_user_preference = PrimeLoader.load("mobileprefs_get_user_preference", "ss");
-	private static var set_user_preference = PrimeLoader.load("mobileprefs_set_user_preference", "ssv");
-	private static var clear_user_preference = PrimeLoader.load("mobileprefs_clear_user_preference", "sv");
+	private static var get_user_preference = PrimeLoader.load("samcodesmobileprefs_get_user_preference", "ss");
+	private static var set_user_preference = PrimeLoader.load("samcodesmobileprefs_set_user_preference", "ssv");
+	private static var clear_user_preference = PrimeLoader.load("samcodesmobileprefs_clear_user_preference", "sv");
 	#end
 }
 

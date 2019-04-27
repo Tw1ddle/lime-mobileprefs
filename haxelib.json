@@ -1,9 +1,9 @@
 {
-	"name": "lime-mobileprefs",
+	"name": "samcodes-mobileprefs",
 	"url": "https://github.com/Tw1ddle/lime-mobileprefs",
 	"license": "MIT",
 	"tags": ["mobile","preferences","openfl","lime","android","ios"],
-	"description": "Support for salvaging savedata from apps using old versions of lime/OpenFL",
+	"description": "Helper for salvaging savedata when upgrading apps from legacy to new versions of lime/OpenFL",
 	"version": "1.0.0",
 	"releasenote": "Initial release",
 	"contributors": ["samcodes,justin-espedal"],

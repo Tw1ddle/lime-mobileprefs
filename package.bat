@@ -1,1 +1,1 @@
-zip -0r lime-mobileprefs.zip dependencies extension ndll project haxelib.json include.xml README.md CHANGELOG.md LICENSE
+zip -0r samcodes-mobileprefs.zip dependencies extension ndll project haxelib.json include.xml README.md CHANGELOG.md LICENSE
