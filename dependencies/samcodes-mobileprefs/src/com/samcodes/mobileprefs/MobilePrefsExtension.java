@@ -1,9 +1,7 @@
 package com.samcodes.mobileprefs;
 
-import android.app.*;
-import android.content.*;
+import android.content.SharedPreferences;
 import org.haxe.extension.Extension;
-import org.haxe.lime.*;
 
 public class MobilePrefsExtension extends Extension
 {

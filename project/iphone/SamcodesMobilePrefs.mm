@@ -1,7 +1,9 @@
 #include "SamcodesMobilePrefs.h"
 
-#import <CoreFoundation/CoreFoundation.h>
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <Foundation/NSAutoreleasePool.h>
+#import <Foundation/NSString.h>
+#import <Foundation/NSUserDefaults.h>
 
 namespace samcodesmobileprefs
 {
