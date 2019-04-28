@@ -20,7 +20,7 @@ Include the haxelib through Project.xml:
 <haxelib name="samcodes-mobileprefs" />
 ```
 
-
+See this [savedata salvaging test](https://github.com/Tw1ddle/savedata-salvaging-test) for a usage example.
 
 ### Notes
 
