@@ -13,8 +13,10 @@ import sys.FileSystem;
 @:access(openfl.net.SharedObject)
 class SaveDataSalvager
 {
+	// Salvages old savedata that used to be stored in SharedPreferences on Android and defaultPrefs on iOS
+	// Pass in the key containing the old encoded save name e.g. "save_one"
 	public static function salvageSaveData(oldSaveDataName:String):SaveDataSalvagingResult {
-		var newSaveDataSolPath = SharedObject.__getPath("", oldSaveDataName);
+		var newSaveDataSolPath:String = SharedObject.__getPath("", oldSaveDataName);
 		if (FileSystem.exists(newSaveDataSolPath)) {
 			trace("New savedata already exists, will skip old savedata salvaging");
 			return SaveDataSalvagingResult.NEW_SAVEDATA_ALREADY_EXISTS;
@@ -26,6 +28,8 @@ class SaveDataSalvager
 			return SaveDataSalvagingResult.OLD_SAVEDATA_DIDNT_EXIST;
 		}
 		
+		trace("Will write old savedata: " + oldSaveData + " to new save file at " + newSaveDataSolPath);
+		
 		try {
 			var newSolDirectory = Path.directory(newSaveDataSolPath);
 			
@@ -34,7 +38,7 @@ class SaveDataSalvager
 				SharedObject.__mkdir(newSolDirectory);
 			}
 			
-			var output = File.write(newSolDirectory, false);
+			var output = File.write(newSolDirectory + oldSaveDataName + ".sol", false);
 			output.writeString(oldSaveData);
 			output.close();
 		} catch(e:Dynamic) {
