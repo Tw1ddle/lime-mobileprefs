@@ -17,9 +17,9 @@ void samcodesmobileprefs_set_user_preference(HxString inId, HxString inValue)
 }
 DEFINE_PRIME2v(samcodesmobileprefs_set_user_preference);
 
-value samcodesmobileprefs_get_user_preference(HxString inId)
+HxString samcodesmobileprefs_get_user_preference(HxString inId)
 {
-	return alloc_string(getUserPreference(inId.c_str()));
+	return HxString(getUserPreference(inId.c_str()));
 }
 DEFINE_PRIME1(samcodesmobileprefs_get_user_preference);
 
