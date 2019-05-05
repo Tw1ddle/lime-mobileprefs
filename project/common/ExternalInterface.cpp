@@ -11,21 +11,21 @@ using namespace samcodesmobileprefs;
 
 #ifdef IPHONE
 
-void samcodesmobileprefs_set_user_preference(value inId, value inValue)
+void samcodesmobileprefs_set_user_preference(HxString inId, HxString inValue)
 {
-	setUserPreference(val_string(inId), val_string(inValue));
+	setUserPreference(inId.c_str(), inValue.c_str());
 }
 DEFINE_PRIME2v(samcodesmobileprefs_set_user_preference);
 
-value samcodesmobileprefs_get_user_preference(value inId)
+value samcodesmobileprefs_get_user_preference(HxString inId)
 {
-	return alloc_string(getUserPreference(val_string(inId)));
+	return alloc_string(getUserPreference(inId.c_str()));
 }
 DEFINE_PRIME1(samcodesmobileprefs_get_user_preference);
 
-void samcodesmobileprefs_clear_user_preference(value inId)
+void samcodesmobileprefs_clear_user_preference(HxString inId)
 {
-	clearUserPreference(val_string(inId));
+	clearUserPreference(inId.c_str());
 }
 DEFINE_PRIME1v(samcodesmobileprefs_clear_user_preference);
 
